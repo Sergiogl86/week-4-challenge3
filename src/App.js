@@ -48,13 +48,13 @@ function App() {
             <span className="number">667359961</span>
             {/* <!-- El botón de llamar debe tener la clase "activo" cuando -->
           <!-- el número de teléfono tiene 9 cifras --> */}
-            <a href="#" className="call">
+            {/* <a href="#" className="call">
               Call
-            </a>
+            </a> */}
             {/* <!-- Sólo se tiene que ver un botón u otro --> */}
-            <a href="#" className="hang active">
+            {/* <a href="#" className="hang active">
               Hang
-            </a>
+            </a> */}
           </div>
         </main>
       </div>
