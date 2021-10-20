@@ -1,15 +1,20 @@
 function Buton({ nameText, className, state, functionButton }) {
   const classActive = `${className} active`;
 
+  const eventfunctionButton = (event) => {
+    event.preventDefault();
+    functionButton(nameText);
+  };
+
   if (state === true) {
     return (
-      <a onClick={functionButton} href="Boton" className={classActive}>
+      <a onClick={eventfunctionButton} href="Boton" className={classActive}>
         {nameText}
       </a>
     );
   } else {
     return (
-      <a onClick={functionButton} href="Boton" className={className}>
+      <a onClick={eventfunctionButton} href="Boton" className={className}>
         {nameText}
       </a>
     );
