@@ -2,15 +2,8 @@ import { useContext } from "react";
 import Context from "../Context/Context";
 
 function Key({ numero }) {
-  const {
-    numeroTelefono,
-    setNumeroTelefono,
-    hangState,
-    setHangState,
-    callState,
-    setCallState,
-  } = useContext(Context);
-  debugger;
+  const { numeroTelefono, setNumeroTelefono, setCallState } =
+    useContext(Context);
   const numeroTecla = numero;
   const introducirNumero = () => {
     if (numeroTelefono.length < 9) {
