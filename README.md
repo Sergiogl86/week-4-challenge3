@@ -15,12 +15,19 @@ Aquí tienes la maquetación HTML/CSS de una aplicación, tendrás que programar
 
 Separa todo en los siguientes componentes:
 
-- Info
-- Display
+- Info (message)
+  muestra un parametro que le llega, y solo aparece con el estado true.
+- Display (number)
+  muestra el valor que le entra por parametro. El numero generado con las pulsaciones
 - Actions
+  Poder marcar los numeros con el teclado.
   - Action
+    Llamar -> realiza la llamada - Recibe una función por parametro.
+    Colgar -> para la llamada - Recibe una función por parametro
 - Keyboard
+  Representa el array de numeros
   - Key
+    representa un boton y le llega una función por parametro.
 
 Guarda los estados comunes en un context.
 
