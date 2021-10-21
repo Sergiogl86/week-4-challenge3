@@ -10,7 +10,7 @@ function Keyboard({ funcionKeyBig }) {
         {tecladoNumerico.map((numero) => (
           <Key key={numero} numero={numero} />
         ))}
-        <KeyBig funcionKeyBig={funcionKeyBig} />
+        <KeyBig />
       </ol>
     </div>
   );
