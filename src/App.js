@@ -16,6 +16,9 @@ function App() {
     setPanelInfo(true);
     setCallState(false);
     setHangState(true);
+    setTimeout(() => {
+      funcionColgar();
+    }, 5000);
   };
 
   const funcionColgar = () => {
