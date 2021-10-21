@@ -8,8 +8,23 @@ import { useState } from "react";
 
 function App() {
   const [numeroTelefono, setNumeroTelefono] = useState("");
-  const [hangState, setHangState] = useState(false);
   const [callState, setCallState] = useState(false);
+  const [hangState, setHangState] = useState(false);
+  const [panelInfo, setPanelInfo] = useState(false);
+
+  const funcionLlamar = () => {
+    setPanelInfo(true);
+    setCallState(false);
+    setHangState(true);
+  };
+
+  const funcionColgar = () => {
+    setPanelInfo(false);
+    setCallState(false);
+    setHangState(false);
+    setNumeroTelefono("");
+  };
+
   return (
     <Context.Provider
       value={{
@@ -22,7 +37,7 @@ function App() {
       }}
     >
       <div className="container">
-        <PanelInfo state={true} />
+        <PanelInfo state={panelInfo} />
         <main className="phone">
           <Keyboard funcionKeyBig={() => console.log("funcionKeyBig")} />
           <div className="actions">
@@ -31,13 +46,13 @@ function App() {
               nameText={"Call"}
               className={"call"}
               state={callState}
-              functionButton={() => console.log("Call")}
+              functionButton={funcionLlamar}
             />
             <Buton
               nameText={"Hang"}
               className={"hang"}
               state={hangState}
-              functionButton={() => console.log("Hang")}
+              functionButton={funcionColgar}
             />
           </div>
         </main>
