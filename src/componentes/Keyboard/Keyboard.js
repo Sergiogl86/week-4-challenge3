@@ -1,7 +1,7 @@
 import Key from "../Key/Key";
 import KeyBig from "../KeyBig/KeyBig";
 
-function Keyboard({ funcionKeyBig }) {
+function Keyboard() {
   const tecladoNumerico = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
   return (

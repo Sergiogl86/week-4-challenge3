@@ -13,13 +13,19 @@ function Buton({ nameText, className, state, functionButton }) {
         onClick={eventfunctionButton}
         href="Boton"
         className={classActive}
+        disabled={!state}
       >
         {nameText}
       </a>
     );
   } else {
     return (
-      <a onClick={eventfunctionButton} href="Boton" className={className}>
+      <a
+        onClick={eventfunctionButton}
+        href="Boton"
+        className={className}
+        disabled={!state}
+      >
         {nameText}
       </a>
     );

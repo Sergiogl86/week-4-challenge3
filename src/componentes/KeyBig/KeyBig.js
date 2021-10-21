@@ -4,7 +4,7 @@ import Context from "../Context/Context";
 function KeyBig() {
   const textKeyBig = "delete";
 
-  const { numeroTelefono, setNumeroTelefono, setCallState } =
+  const { numeroTelefono, setNumeroTelefono, setCallState, hangState } =
     useContext(Context);
 
   const borrarUltimoNumero = () => {
@@ -18,7 +18,11 @@ function KeyBig() {
 
   return (
     <li>
-      <button onClick={borrarUltimoNumero} className="key big">
+      <button
+        onClick={borrarUltimoNumero}
+        className="key big"
+        disabled={hangState}
+      >
         {textKeyBig}
       </button>
     </li>
