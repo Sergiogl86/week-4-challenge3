@@ -8,7 +8,12 @@ function Buton({ nameText, className, state, functionButton }) {
 
   if (state === true) {
     return (
-      <a onClick={eventfunctionButton} href="Boton" className={classActive}>
+      <a
+        role="button"
+        onClick={eventfunctionButton}
+        href="Boton"
+        className={classActive}
+      >
         {nameText}
       </a>
     );
