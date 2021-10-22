@@ -35,6 +35,8 @@ describe("Given a Key component", () => {
       const hangState = false;
       const keyValue = "5";
 
+      const expectedValue = "5";
+
       render(
         <Context.Provider
           value={{ setNumeroTelefono, numeroTelefono, setCallState, hangState }}
@@ -48,7 +50,7 @@ describe("Given a Key component", () => {
 
       const result = KeyButton.innerHTML;
 
-      expect(result).toEqual(keyValue);
+      expect(result).toEqual(expectedValue);
     });
   });
 });
